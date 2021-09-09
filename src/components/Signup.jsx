@@ -21,12 +21,15 @@ function Signup() {
         confirmPassword: "",
       }}
       validationSchema={validate}
+      onSubmit={values=>{
+          console.log(values,'heyy');
+      }}
     >
       {(formik) => {
           return(
         <div>
           <h1 className="my-4 font-weight-bold-display-4">Sign Up</h1>
-          {console.log(formik.values, "dsada")}
+          {/* {console.log(formik.values, "dsada")} */}
           <Form>
             <TextField label="First Name" name="firstName"type="text" />
             <TextField label="Last Name" name="lastName"type="text" />
